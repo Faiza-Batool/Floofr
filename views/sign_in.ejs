@@ -1,0 +1,22 @@
+<%- include("./partials/header.ejs") %> 
+<div class = "container">
+<br>
+<br>
+<center>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <form action="/sign_in" method="POST" class='form-inline'>
+          <h3 class="card-title">Please Sign In</h3>
+          <p class="card-text">
+            Submit a user name
+          </p>
+          <input class=' form-control mr-2' name='username' placeholder='e.g Cutie Patootie'>
+          <br>
+          <button type='submit' class='btn btn-dark btn-block mb-4'>Sign In</button>
+      </form>
+  
+  </div>
+</div>
+</center>
+
+<%- include("./partials/footer.ejs") %> 
