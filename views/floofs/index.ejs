@@ -1,0 +1,40 @@
+<%- include("../partials/header.ejs") %> 
+<br>
+<div class="container">
+    <% for(let floof of list) {%>
+        <br>
+        <div class="card" style="width: 30rem; border:3px solid blueviolet";>
+            <br>
+            <% if (floof.imageUrl == "") {%> 
+                <div>
+                    <h5>
+                        &emsp;<img src="images/doggy.png" class="rounded-circle rounded"  width="40" height="40" alt="image">
+                        &emsp;<%=floof.username%> ~ <%=Math.floor((Math.random() * 60) + 1);%> minutes ago
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text"><%=floof.story%></p>
+                </div>
+            <%}else{%>
+                <div>
+                    <h5>
+                        &emsp;<img src="<%= floof.imageUrl%>" class="rounded-circle rounded"  width="40" height="40" alt="image">
+                        &emsp;<%=floof.username%> ~ <%=Math.floor((Math.random() * 60) + 1);%> minutes ago
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text"><%=floof.story%></p>
+                </div>
+                <br>
+                <center>
+                    <a href="<%= floof.imageUrl%>">
+                        <img src="images/envelop.jpg"  width="200" height="200" alt="msg">
+                    </a>
+                    
+                </center>
+            <% } %> 
+            <br>
+        </div>    
+        <% } %>  
+</div>
+<%- include("../partials/footer.ejs") %> 
